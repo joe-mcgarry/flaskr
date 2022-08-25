@@ -8,6 +8,11 @@ Install flask through pip (in a Python3 venv) using
 pip install Flask
 ```
 
+Initialise the database by running this inside the venv terminal:
+``` terminal
+flask --app flaskr init-db
+```
+
 Start the app by running inside the venv terminal
 ``` terminal
 flask --app flaskr --debug --run
