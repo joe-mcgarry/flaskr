@@ -2,6 +2,11 @@
 
 A simple crud application following the flask tutorial found [here](https://flask.palletsprojects.com/en/2.2.x/tutorial/)
 
+Create a virtual environment:
+``` terminal
+. venv/bin/activate
+```
+
 Install flask through pip (in a Python3 venv) using
 
 ``` terminal
