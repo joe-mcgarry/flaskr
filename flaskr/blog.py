@@ -30,19 +30,20 @@ def create():
         error = None
 
         if not title:
-            error = "Title is required"
+            error = 'Title is required.'
 
         if error is not None:
             flash(error)
         else:
             db = get_db()
             db.execute(
-                'INSERT INTO post (title, body, author_id)',
+                'INSERT INTO post (title, body, author_id)'
                 ' VALUES (?, ?, ?)',
                 (title, body, g.user['id'])
             )
             db.commit()
             return redirect(url_for('blog.index'))
+
     return render_template('blog/create.html')
 
 
@@ -98,4 +99,4 @@ def delete(id):
     db = get_db()
     db.execute('DELETE FROM post WHERE id = ?', (id,))
     db.commit()
-    return redirect(url_for('blod.index'))
+    return redirect(url_for('blog.index'))
